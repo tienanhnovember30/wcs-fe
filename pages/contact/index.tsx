@@ -6,7 +6,7 @@ const Contact = (props: Props) => {
     return (
         <div>
            
-            <section className="main w-[1410px] mx-auto mt-[112px] grid grid-cols-2">
+            <div className="main w-[1410px] mx-auto mt-[112px] grid grid-cols-2">
                 <div className="mr-[81px]">
                     <h2 className="text-2xl mb-[30px]">LIÊN HỆ</h2>
                     <span className="text-[#6E6F7E] ">Nếu bạn muốn biết thêm về các chính sách của chúng tôi, bạn có thể tham khảo
@@ -48,9 +48,9 @@ const Contact = (props: Props) => {
                 <div className="box">
                     <h2 className="text-2xl">GÓP Ý VỚI CHÚNG TÔI</h2>
                     <input type="text" placeholder="Tên của bạn"
-                        className="w-[690px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]">
+                        className="w-[690px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]"/>
                         <input type="text" placeholder="Email của bạn"
-                            className="w-[690px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]">
+                            className="w-[690px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]"/>
                             <textarea name="" id="" className="w-[690px] border border-[#A4A5AE] mt-[30px]">
                             </textarea>
                             <div>
@@ -60,7 +60,7 @@ const Contact = (props: Props) => {
                             </div>
 
                         </div>
-                    </section>
+                    </div>
                 </div>
                 )
 }
