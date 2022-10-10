@@ -2,8 +2,10 @@ import React from "react";
 
 type Props = {};
 
-const index = (props: Props) => {
-  return <div>index</div>;
+const Footer = (props: Props) => {
+  return <div>
+    Footer
+      </div>;
 };
 
-export default index;
+      export default Footer;

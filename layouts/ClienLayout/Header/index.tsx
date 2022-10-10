@@ -2,8 +2,10 @@ import React from "react";
 
 type Props = {};
 
-const index = (props: Props) => {
-  return <div>index</div>;
+const Header = (props: Props) => {
+  return <div>
+    Header
+  </div>;
 };
 
-export default index;
+export default Header;
