@@ -882,19 +882,19 @@ const Home = (props: Props) => {
         />
       </div>
       <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-1/2">
-        <div className="px-6 py-12 w-1/2 justify-center content-center">
+        <div className="px-6 py-12  mx-auto ml-[64px]">
           <h2 className="text-3xl font-normal mb-6">
             Đăng ký để nhận 30% ưu đãi
           </h2>
           <div className="md:flex flex-row">
             <input
               type="text"
-              className="form-control block w-full px-4 py-2 mb-2 md:mb-0 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              className="w-[440px] form-control block w-full px-4 py-2 mb-2 md:mb-0 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               placeholder="Email của bạn"
             />
             <button
               type="submit"
-              className="inline-block px-7 py-3 bg-black text-white font-normal text-sm leading-snug uppercase hover:bg-blue-700 hover:bg-white hover:text-black"
+              className="inline-block px-7 py-3 bg-black text-white font-normal text-sm leading-snug uppercase hover:bg-blue-700 hover:bg-white hover:text-black "
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
             >
