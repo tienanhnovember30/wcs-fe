@@ -1042,7 +1042,7 @@ const Home = (props: Props) => {
         <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-center">
           <p className="text-gray-600">
             {" "}
-            <span className="font-serif">"</span> Không phải tự dưng mà tuy khen
+            <span className="font-serif">"</span> Không phải tự dưng mà tôi khen
             shop này đâu nhé. Đồ gì đâu mà vừa chất lượng lại vừa có giá vô cùng
             rẻ nữa chứ. <span className="font-serif">"</span>
           </p>
