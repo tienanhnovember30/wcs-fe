@@ -4,7 +4,6 @@ import styles from './header.module.css'
 
 type Props = {};
 
-<<<<<<< HEAD
 const header = (props: Props) => {
   return <header className="flex flex-wrap">
   <section className="relative mx-auto">
@@ -104,12 +103,3 @@ const header = (props: Props) => {
 };
 
 export default header;
-=======
-const Header = (props: Props) => {
-  return <div>
-    Header
-  </div>;
-};
-
-export default Header;
->>>>>>> e8c047edacbc4b0a55dc356d08b971df29f283bb

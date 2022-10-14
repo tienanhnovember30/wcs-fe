@@ -3,7 +3,7 @@ import React from "react";
 type Props = {};
 
 const Footer = (props: Props) => {
-<<<<<<< HEAD
+
   return <section className="footer w-full mx-auto ">
   <hr className="w-full mb-[40px]" />
   <div className="w-[1410px] mx-auto flex">
@@ -74,11 +74,3 @@ const Footer = (props: Props) => {
 };
 
 export default Footer;
-=======
-  return <div>
-    Footer
-      </div>;
-};
-
-      export default Footer;
->>>>>>> e8c047edacbc4b0a55dc356d08b971df29f283bb
