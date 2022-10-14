@@ -103,4 +103,3 @@ const header = (props: Props) => {
 };
 
 export default header;
-
