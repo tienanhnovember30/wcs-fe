@@ -17,4 +17,4 @@ export const formatDate = (dateString: any) => {
     const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
 
     return `${formatDate}/${month}/${date.getFullYear()} ${hours}:${minutes}:${seconds}`;
-};
+}; s
