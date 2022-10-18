@@ -109,7 +109,7 @@ const UserList = (props: Props) => {
               {/* {formatDate(item.createdAt)} */}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-              <Link href={`/admin/user/${item._id}`}>
+              <Link href={`/admin/users/${item._id}/edit`}>
                 <span className="h-8 inline-flex items-center px-3 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   Edit
                 </span>
