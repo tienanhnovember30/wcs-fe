@@ -1,7 +1,6 @@
 import "../styles/globals.scss";
 import React from "react";
 import { AppPropsWithLayout } from "../models/layout";
-import { ClientLayout } from "../layouts";
 import { Provider } from "react-redux";
 import persistor, { store } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
@@ -12,6 +11,7 @@ config.autoAddCss = false;
 import "sweetalert2/src/sweetalert2.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { ClientLayout } from "../layouts";
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout =
