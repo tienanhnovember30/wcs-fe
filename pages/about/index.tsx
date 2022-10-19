@@ -1,7 +1,7 @@
 import React from 'react'
 import { ClientLayout } from '../../layouts'
 
-
+import styles from './about.module.css'
 type Props = {}
 
 const About = (props: Props) => {
@@ -25,7 +25,7 @@ const About = (props: Props) => {
   </section>
   {/* Breadcrumb Section End */}
   {/* About Section Begin */}
-  <section className="about spad">
+  <section className={styles.about}>
     <div className="container mx-auto sm:px-4">
       <div className="flex flex-wrap ">
         <div className="lg:w-full pr-4 pl-4">

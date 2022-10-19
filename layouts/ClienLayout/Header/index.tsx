@@ -6,9 +6,9 @@ type Props = {};
 
 const header = (props: Props) => {
   return <header className="flex flex-wrap">
-  <section className="relative mx-auto">
+  <section className="relative w-screen mx-auto">
     {/* navbar */}
-    <nav className="flex justify-between bg-black text-white w-screen">
+    <nav className="flex justify-between bg-black text-white ">
       <div className="px-0 xl: py-6 flex w-[1410px] mx-auto items-center">
         <a className="text-3xl font-bold font-heading" href="#">
           <img className="h-12" src="img/logo.png" alt="logo" />
@@ -42,7 +42,7 @@ const header = (props: Props) => {
           </li>
         </ul>
         {/* Header Icons */}
-        <div className="hidden xl:flex items-center space-x-5 items-center">
+        <div className="hidden xl:flex space-x-5 items-center">
           <a className="hover:text-gray-200" href="#">
             <img src="img/icon/search.png" />
           </a>

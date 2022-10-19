@@ -375,8 +375,8 @@ const Home = (props: Props) => {
   className="categories container-full py-5 bg-rose-50"
   data-aos="zoom-in-up"
 >
-  <div className="w-[1410px] mx-auto flex flex-wrap  flex justify-center">
-    <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+  <div className="w-[1410px] mx-auto flex-wrap  flex justify-center">
+    <div className="cate_item lg:w-1/5 md:w-2/5 pr-4 pl-4">
       <a href="#">
         <img
           src="img/category/cate1.jpg"
@@ -387,7 +387,7 @@ const Home = (props: Props) => {
         <a href="#">Quần nam</a>
       </h5>
     </div>
-    <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+    <div className="cate_item lg:w-1/5 md:w-2/5 pr-4 pl-4">
       <a href="#">
         <img
           src="img/category/cate2.jpg"
@@ -398,7 +398,7 @@ const Home = (props: Props) => {
         <a href="#">Áo nam</a>
       </h2>
     </div>
-    <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+    <div className="cate_item lg:w-1/5 md:w-2/5 pr-4 pl-4">
       <a href="#">
         <img
           src="img/category/cate3.jpg"
@@ -409,7 +409,7 @@ const Home = (props: Props) => {
         <a href="#">Áo nữ</a>
       </h2>
     </div>
-    <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+    <div className="cate_item lg:w-1/5 md:w-2/5 pr-4 pl-4">
       <a href="#">
         <img
           src="img/category/cate4.jpg"
@@ -420,7 +420,7 @@ const Home = (props: Props) => {
         <a href="#">Quần nữ</a>
       </h2>
     </div>
-    <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
+    <div className="cate_item lg:w-1/5 md:w-1/2 pr-4 pl-4">
       <a href="#">
         <img
           src="img/category/cate5.jpg"
@@ -889,12 +889,12 @@ const Home = (props: Props) => {
           <div className="md:flex flex-row">
             <input
               type="text"
-              className="w-[440px] form-control block w-full px-4 py-2 mb-2 md:mb-0 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              className="w-[440px] form-control block px-4 py-2 mb-2 md:mb-0 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               placeholder="Email của bạn"
             />
             <button
               type="submit"
-              className="inline-block px-7 py-3 bg-black text-white font-normal text-sm leading-snug uppercase hover:bg-blue-700 hover:bg-white hover:text-black "
+              className="inline-block px-7 py-3 bg-black text-white font-normal text-sm leading-snug uppercase hover:bg-slate-900  hover:text-white "
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
             >
@@ -1084,7 +1084,7 @@ const Home = (props: Props) => {
             Cách Chi Tiêu Hợp Lý
           </h1>
           <div className="text-center mt-4">
-            <a href="#" className="inline-block text-black underline ">
+            <a href="#" className="inline-block text-black underline underline-offset-8">
               Đọc Tiếp
             </a>
           </div>
@@ -1102,7 +1102,7 @@ const Home = (props: Props) => {
             Đồ Len Cho Mùa Đông
           </h1>
           <div className="text-center mt-4">
-            <a href="#" className="inline-block text-black underline ">
+            <a href="#" className="inline-block text-black underline underline-offset-8">
               Đọc Tiếp
             </a>
           </div>
@@ -1120,7 +1120,7 @@ const Home = (props: Props) => {
             Cách Phối Đồ Đẹp
           </h1>
           <div className="text-center mt-4">
-            <a href="#" className="inline-block text-black underline ">
+            <a href="#" className="inline-block text-black underline underline-offset-8 ">
               Đọc Tiếp
             </a>
           </div>

@@ -66,8 +66,7 @@ const orderCancel = (props: Props) => {
                     <input type="checkbox" className="mr-[10px]" /><a href="" className="text-lg">Thay đổi địa điểm</a> <br />
                     <input type="checkbox" className="mr-[10px]" /><a href="" className="text-lg">Không còn nhu cầu mua nữa</a> <br />
                     <input type="checkbox" className="mr-[10px]" /><a href="" className="text-lg">Muốn thay đổi kích cỡ màu sắc</a> <br />
-                    <input type="checkbox" className="mr-[10px]" /><a href="" className="text-lg">Tôi còn mã giảm giá chưa dùng</a> <br />
-                    <input type="checkbox" className="mr-[10px]" /><a href="" className="text-lg">Quần áo bị hư hại </a><br />
+                    <input type="checkbox" className="mr-[10px]" /><a href="" className="text-lg">Tôi còn mã giảm giá chưa dùng</a> <br />   
                     <a href="" className='mt-[5px] text-lg: '>Lý do khác :</a> <br />
                     <textarea name="" id="" className='w-[480px] h-[100px] border-2 border-black mt-[20px]'></textarea><br />
                     <button className="mt-[30px] text-slate-50 bg-[#E22C43] w-[300px] h-[60px]">Xác nhận hủy đơn</button>
