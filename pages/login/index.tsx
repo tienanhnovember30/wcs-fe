@@ -1,3 +1,6 @@
+
+import style from './login.module.css'
+import Image from 'next/image'
 import { useRouter } from "next/router";
 import React, { ReactElement } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -61,6 +64,20 @@ const Login = (props: Props) => {
                 )}
               </div>
 
+
+                    <div
+                        className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0"
+                    >
+                        <Image layout='fill'
+                            src="/img"
+                            className="w-full" 
+                            alt="Sample image"
+                        />
+                    </div>
+                    <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+                        <h2 className='text-2xl text-center mb-[40px]'>Đăng nhập</h2>
+                        <form>
+
               <div className="mb-6">
                 <input
                   type="password"
@@ -73,6 +90,7 @@ const Login = (props: Props) => {
                   <span className="text-red-700">is required</span>
                 )}
               </div>
+
 
               <div className="flex justify-between items-center mb-6">
                 <div className="form-group form-check">
