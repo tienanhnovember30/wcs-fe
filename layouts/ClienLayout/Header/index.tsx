@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styles from './header.module.css'
 
@@ -16,9 +17,9 @@ const header = (props: Props) => {
         {/* Nav Links */}
         <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
           <li>
-            <a className="hover:text-gray-200" href="#">
+            <Link className="hover:text-gray-200" href="">
               Trang Chủ
-            </a>
+            </Link>
           </li>
           <li>
             <a className="hover:text-gray-200" href="#">
