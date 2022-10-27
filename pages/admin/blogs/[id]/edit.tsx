@@ -119,7 +119,7 @@ const EditBlog: NextPageWithLayout = (props: Props) => {
                                         {errors.title?.message}
                                     </div>
                                 </div>
-{/* 
+                                {/* 
                                 <div className="col-span-6 md:col-span-3">
                                     <label
                                         htmlFor="form__add-user-role"
@@ -187,7 +187,7 @@ const EditBlog: NextPageWithLayout = (props: Props) => {
                                     >
                                         Nội dung bài viết
                                     </label>
-                                 
+
                                     <textarea id=""  {...register("desc", {
                                         required: "Vui lòng không để trống",
                                     })} className="py-2 px-3 mt-1 border focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none block w-full shadow-sm sm:text-sm border-gray-300 rounded-md h-[100px]"
@@ -204,14 +204,16 @@ const EditBlog: NextPageWithLayout = (props: Props) => {
                                         Xem trước ảnh
                                     </label>
                                     <div className="mt-1 w-40 h-40 relative">
-                                        <img
-                                            src={
-                                                preview ||
-                                                "https://drums71.ru/wp-content/uploads/2018/02/no-img.jpg"
-                                            }
-                                            alt="Preview Image"
-                                            className="h-40 w-40 rounded-full object-cover"
-                                        />
+                                        <picture>
+                                            <img
+                                                src={
+                                                    preview ||
+                                                    "https://drums71.ru/wp-content/uploads/2018/02/no-img.jpg"
+                                                }
+                                                alt="Preview Image"
+                                                className="h-40 w-40 rounded-full object-cover"
+                                            />
+                                        </picture>
                                     </div>
                                 </div>
                                 <div className="col-span-6">
