@@ -15,7 +15,9 @@ type Props = {};
 
 type Inputs = {
     code: string;
-    status: string 
+    status: string ;
+    amount: number;
+    percent: number
 };
 
 const AddVouche: NextPageWithLayout = (props: Props) => {
@@ -89,8 +91,25 @@ const AddVouche: NextPageWithLayout = (props: Props) => {
                                         {errors.code?.message}
                                     </div>
                                 </div>
-
-                                <div className="col-span-6 md:col-span-3">
+                                <div className="col-span-6">
+                                    <label
+                                        htmlFor="form__add-user-fullname"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Số lượng 
+                                    </label>
+                                    <input
+                                        type="number"
+                                        {...register("amount", { required: "Vui lòng không bỏ trống" })}
+                                        id="form__add-user-fullname"
+                                        className="py-2 px-3 mt-1 border focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        placeholder=""
+                                    />
+                                    <div className="text-sm mt-0.5 text-red-500">
+                                        {errors.amount?.message}
+                                    </div>
+                                </div>
+                                {/* <div className="col-span-6 md:col-span-3">
                                     <label
                                         htmlFor="form__add-user-role"
                                         className="block text-sm font-medium text-gray-700"
@@ -110,18 +129,18 @@ const AddVouche: NextPageWithLayout = (props: Props) => {
                                     <div className="text-sm mt-0.5 text-red-500">
                                         {errors.status?.message}
                                     </div>
-                                </div>
+                                </div> */}
 
-                                {/* <div className="col-span-6 md:col-span-3">
+                                <div className="col-span-6 md:col-span-3">
                                     <label
                                         htmlFor="form__add-user-phone"
                                         className="block text-sm font-medium text-gray-700"
                                     >
-                                        Thời gian tồn tại
+                                        Giảm giá(%)
                                     </label>
                                     <input
-                                        type="text"
-                                        {...register("time", {
+                                        type="number"
+                                        {...register("percent", {
                                             required: "Vui lòng không bỏ trống",
                                         })}
                                         id="form__add-user-phone"
@@ -129,9 +148,9 @@ const AddVouche: NextPageWithLayout = (props: Props) => {
                                         placeholder=""
                                     />
                                     <div className="text-sm mt-0.5 text-red-500">
-                                        {errors.time?.message}
+                                        {errors.percent?.message}
                                     </div>
-                                </div>                                                                                                                            */}
+                                </div>                                                                                                                           
                             </div>
                         </div>
                         <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">

@@ -63,13 +63,21 @@ const VoucheList = (props: Props) => {
             {" "}
             Trạng thái{" "}
           </th>
-          {/* <th
+          
+          <th
             scope="col"
             className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
           >
             {" "}
-            Thời gian{" "}
-          </th> */}
+            Số lượng{" "}
+          </th>
+          <th
+            scope="col"
+            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          >
+            {" "}
+            Giảm giá{"(%)"}
+          </th>
           <th
             scope="col"
             className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -104,10 +112,28 @@ const VoucheList = (props: Props) => {
                 </div>
               </div>
             </td>
+            <td className="px-6 py-4 whitespace-nowrap">
+              <div className="flex items-center">               
+                <div className="ml-4">
+                  <div className="text-sm font-medium text-gray-900">
+                  {item.amount} <br />
+                  {/* {formatDate(item.createdAt)} */}
+                  </div>   
+                </div>
+              </div>
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap">
+              <div className="flex items-center">               
+                <div className="ml-4">
+                  <div className="text-sm font-medium text-gray-900">
+                  {item.percent} <br />
+                 
+                  </div>   
+                </div>
+              </div>
+            </td>
            
-            {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500">
-              {formatDate(item.createdAt)}
-            </td> */}
+           
             <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
               <Link href={`/admin/vouches/${item._id}/edit`}>
                 <span className="h-8 inline-flex items-center px-3 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

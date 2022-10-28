@@ -18,6 +18,8 @@ type Props = {};
 type Inputs = {
     code: string;
     status: string ;
+    amount: number;
+    percent: number
 };
 
 const AddUser: NextPageWithLayout = (props: Props) => {
@@ -108,6 +110,44 @@ const AddUser: NextPageWithLayout = (props: Props) => {
                                     </div>
                                 </div>
 
+                                <div className="col-span-6">
+                                    <label
+                                        htmlFor="form__add-user-fullname"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Số lượng 
+                                    </label>
+                                    <input
+                                        type="number"
+                                        {...register("amount", { required: "Vui lòng không bỏ trống" })}
+                                        id="form__add-user-fullname"
+                                        className="py-2 px-3 mt-1 border focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        placeholder=""
+                                    />
+                                    <div className="text-sm mt-0.5 text-red-500">
+                                        {errors.amount?.message}
+                                    </div>
+                                </div>
+                                <div className="col-span-6 md:col-span-3">
+                                    <label
+                                        htmlFor="form__add-user-phone"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Giảm giá(%)
+                                    </label>
+                                    <input
+                                        type="number"
+                                        {...register("percent", {
+                                            required: "Vui lòng không bỏ trống",
+                                        })}
+                                        id="form__add-user-phone"
+                                        className="py-2 px-3 mt-1 border focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        placeholder=""
+                                    />
+                                    <div className="text-sm mt-0.5 text-red-500">
+                                        {errors.percent?.message}
+                                    </div>
+                                </div> 
                                 <div className="col-span-6 md:col-span-3">
                                     <label
                                         htmlFor="form__add-user-role"
