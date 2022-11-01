@@ -17,6 +17,7 @@ type Inputs = {
     code: string;
     status: string ;
     amount: number;
+    time:string;
     percent: number
 };
 
@@ -150,7 +151,27 @@ const AddVouche: NextPageWithLayout = (props: Props) => {
                                     <div className="text-sm mt-0.5 text-red-500">
                                         {errors.percent?.message}
                                     </div>
-                                </div>                                                                                                                           
+                                </div>
+                                <div className="col-span-6 md:col-span-3">
+                                    <label
+                                        htmlFor="form__add-user-phone"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Thời gian hết hạn()
+                                    </label>
+                                    <input
+                                        type="date"
+                                        {...register("time", {
+                                            required: "Vui lòng không bỏ trống",
+                                        })}
+                                        id="form__add-user-phone"
+                                        className="py-2 px-3 mt-1 border focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        placeholder=""
+                                    />
+                                    <div className="text-sm mt-0.5 text-red-500">
+                                        {errors.time?.message}
+                                    </div>
+                                </div>                                                                                                                            
                             </div>
                         </div>
                         <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">

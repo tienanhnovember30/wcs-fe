@@ -5,7 +5,7 @@ export interface Tvouche {
     amount: number,
     createdAt: string,
     percent: number
-    // time:number
+    time:number | string
 }
 export interface userErr {
     error: "string"
