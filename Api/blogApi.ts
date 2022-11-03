@@ -1,9 +1,9 @@
 
 import { Tblog } from "../models/blogs";
-import axiosClient from "./config";
+import axiosClient, { axiosServer } from "./config";
 
 export const getAll = (): Promise<Tblog[]> => {
-    return axiosClient.get("/news");
+    return axiosServer.get("/news");
 };
 
 export const remove = (id: string): Promise<Tblog> => {
@@ -25,3 +25,6 @@ export const update = (blog: Tblog): Promise<Tblog> => {
 export const blogCate = (id: any) => {
     return axiosClient.get(`/news?ct=${id}`);
 };
+export const getBySlug = (slug: any): Promise<Tblog> => {
+    return axiosServer.get(`/news/${slug}/getBySlug`)
+}
