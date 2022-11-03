@@ -19,7 +19,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: "blocking",
   };
 };
-export const getStaticProps: any = async (context: GetStaticPropsContext) => {
+export const getStaticProps: GetStaticProps<Props> = async (
+  context: GetStaticPropsContext
+) => {
   const slug = context.params?.slug as string;
   const blog = await getBySlug(slug);
 
