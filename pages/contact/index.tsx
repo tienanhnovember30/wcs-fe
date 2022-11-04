@@ -16,28 +16,36 @@ const Contact = (props: Props) => {
                     </span>
                     <div className="mt-[40px]">
                         <div className="flex">
-                            <Image src="./Image/Frame.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            <picture>
+                            <img src="./Image/Frame.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            </picture>
                             <div>
                                 <h3 className="text-xl">Địa chỉ</h3>
                                 <span className="text-[#6E6F7E]">Số 1 Trịnh Văn Bô, Phương Canh, Nam Từ Liêm, Hà Nội</span>
                             </div>
                         </div>
                         <div className="flex py-[20px]">
-                            <Image src="./Image/Group.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            <picture>
+                            <img src="./Image/Group.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            </picture>
                             <div>
                                 <h3 className="text-xl">Số điện thoại</h3>
                                 <span className="text-[#6E6F7E]">0987654321</span>
                             </div>
                         </div>
                         <div className="flex">
-                            <Image src="./Image/Group (1).png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            <picture>
+                            <img src="./Image/Group (1).png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            </picture>
                             <div>
                                 <h3 className="text-xl">Email</h3>
                                 <span className="text-[#6E6F7E]">example@gmail.com</span>
                             </div>
                         </div>
                         <div className="flex py-[20px]">
-                            <Image src="./Image//Frame2.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            <picture>
+                            <img src="./Image//Frame2.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                            </picture>
                             <div>
                                 <h3 className="text-xl">Giờ mở cửa</h3>
                                 <span className="text-[#6E6F7E]">Từ 7h - 21h hàng ngày </span>
