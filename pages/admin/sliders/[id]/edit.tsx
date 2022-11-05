@@ -1,15 +1,17 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { ReactElement, useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { AdminLayout } from "../../../layouts";
-import { NextPageWithLayout } from "../../../models/layout";
-import { TSlider } from "../../../models/slider";
-import { addSlider } from "../../../redux/sliderSlice";
+import { get } from "../../../../Api/sliderApi";
+import { AdminLayout } from "../../../../layouts";
+import { NextPageWithLayout } from "../../../../models/layout";
+import { TSlider } from "../../../../models/slider";
+import { addSlider, updateSlider } from "../../../../redux/sliderSlice";
 // import { addUser } from "../../../redux/userSlice";
-import { uploadImage } from "../../../untils";
+import { uploadImage } from "../../../../untils";
 
 type Props = {};
 
@@ -32,13 +34,16 @@ type Inputs = {
   };
 };
 
-const AddSlider: NextPageWithLayout = (props: Props) => {
+const EditSlider: NextPageWithLayout = (props: Props) => {
   const [preview1, setPreview1] = useState<string>();
   const [preview2, setPreview2] = useState<string>();
   const [preview3, setPreview3] = useState<string>();
   const [preview4, setPreview4] = useState<string>();
   const [preview5, setPreview5] = useState<string>();
   const dispatch = useDispatch<any>();
+  const router = useRouter();
+  const { id } = router.query;
+  console.log(id, "id");
 
   const {
     register,
@@ -49,27 +54,113 @@ const AddSlider: NextPageWithLayout = (props: Props) => {
 
   const onSubmit: SubmitHandler<any> = async (values: Inputs) => {
     try {
-      const data1 = await uploadImage(values.url1[0]);
-      const data2 = await uploadImage(values.url2[0]);
-      const data3 = await uploadImage(values.url3[0]);
-      const data4 = await uploadImage(values.url4[0]);
-      const data5 = await uploadImage(values.url5[0]);
+      if (typeof values.url1 === "object") {
+        const data1 = await uploadImage(values.url1[0]);
 
-      const valuesss = {
-        title: values.title,
-        url1: data1.data.url,
-        url2: data2.data.url,
-        url3: data3.data.url,
-        url4: data4.data.url,
-        url5: data5.data.url,
-      };
-      await dispatch(addSlider(valuesss)).unwrap();
-      toast.success("Thêm ảnh thành công");
+        //   const data2 = await uploadImage(values.url2[0]);
+        //   const data3 = await uploadImage(values.url3[0]);
+        //   const data4 = await uploadImage(values.url4[0]);
+        //   const data5 = await uploadImage(values.url5[0]);
+
+        const valuesss = {
+          _id: id,
+          title: values.title,
+          url1: data1.data.url,
+          url2: preview2,
+          url3: preview3,
+          url4: preview4,
+          url5: preview5,
+        };
+        await dispatch(updateSlider(valuesss)).unwrap();
+        toast.success("Thêm ảnh thành công");
+      }
+      if (typeof values.url2 === "object") {
+        const data2 = await uploadImage(values.url2[0]);
+        const valuesss = {
+          _id: id,
+          title: values.title,
+          url2: data2.data.url,
+          url1: preview1,
+          url3: preview3,
+          url4: preview4,
+          url5: preview5,
+        };
+        await dispatch(updateSlider(valuesss)).unwrap();
+        toast.success("Thêm ảnh thành công");
+      }
+      if (typeof values.url3 === "object") {
+        const data3 = await uploadImage(values.url3[0]);
+        const valuesss = {
+          _id: id,
+          title: values.title,
+          url3: data3.data.url,
+          url1: preview1,
+          url2: preview2,
+          url4: preview4,
+          url5: preview5,
+        };
+        await dispatch(updateSlider(valuesss)).unwrap();
+        toast.success("Thêm ảnh thành công");
+      }
+      if (typeof values.url4 === "object") {
+        const data4 = await uploadImage(values.url4[0]);
+        const valuesss = {
+          _id: id,
+          title: values.title,
+          url4: data4.data.url,
+          url1: preview1,
+          url2: preview2,
+          url3: preview3,
+          url5: preview5,
+        };
+        await dispatch(updateSlider(valuesss)).unwrap();
+        toast.success("Thêm ảnh thành công");
+      }
+      if (typeof values.url5 === "object") {
+        const data5 = await uploadImage(values.url5[0]);
+        const valuesss = {
+          _id: id,
+          title: values.title,
+          url5: data5.data.url,
+          url1: preview1,
+          url2: preview2,
+          url4: preview4,
+          url3: preview3,
+        };
+        await dispatch(updateSlider(valuesss)).unwrap();
+        toast.success("Thêm ảnh thành công");
+      } else {
+        const valuesss = {
+          _id: id,
+          title: values.title,
+          url3: preview3,
+          url1: preview1,
+          url2: preview2,
+          url4: preview4,
+          url5: preview5,
+        };
+        await dispatch(updateSlider(valuesss)).unwrap();
+        toast.success("Thêm ảnh thành công");
+      }
     } catch (error) {
       console.log(error);
     }
   };
-
+  useEffect(() => {
+    (async () => {
+      try {
+        const user = await get(id);
+        reset(user);
+        setPreview1(user.url1);
+        setPreview2(user.url2);
+        setPreview3(user.url3);
+        setPreview4(user.url4);
+        setPreview5(user.url5);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, [dispatch, id, reset]);
   return (
     <>
       <Head>
@@ -167,9 +258,7 @@ const AddSlider: NextPageWithLayout = (props: Props) => {
                             <span>Upload a file</span>
                             <input
                               id="form__add-user-avatar1"
-                              {...register("url1", {
-                                required: "Vui lòng chọn ảnh",
-                              })}
+                              {...register("url1")}
                               onChange={(e: any) => {
                                 setPreview1(
                                   URL.createObjectURL(e.target.files[0])
@@ -238,9 +327,7 @@ const AddSlider: NextPageWithLayout = (props: Props) => {
                             <span>Upload a file</span>
                             <input
                               id="form__add-user-avatar2"
-                              {...register("url2", {
-                                required: "Vui lòng chọn ảnh",
-                              })}
+                              {...register("url2")}
                               onChange={(e: any) => {
                                 setPreview2(
                                   URL.createObjectURL(e.target.files[0])
@@ -309,9 +396,7 @@ const AddSlider: NextPageWithLayout = (props: Props) => {
                             <span>Upload a file</span>
                             <input
                               id="form__add-user-avatar3"
-                              {...register("url3", {
-                                required: "Vui lòng chọn ảnh",
-                              })}
+                              {...register("url3")}
                               onChange={(e: any) => {
                                 setPreview3(
                                   URL.createObjectURL(e.target.files[0])
@@ -380,9 +465,7 @@ const AddSlider: NextPageWithLayout = (props: Props) => {
                             <span>Upload a file</span>
                             <input
                               id="form__add-user-avatar4"
-                              {...register("url4", {
-                                required: "Vui lòng chọn ảnh",
-                              })}
+                              {...register("url4")}
                               onChange={(e: any) => {
                                 setPreview4(
                                   URL.createObjectURL(e.target.files[0])
@@ -451,9 +534,7 @@ const AddSlider: NextPageWithLayout = (props: Props) => {
                             <span>Upload a file</span>
                             <input
                               id="form__add-user-avatar5"
-                              {...register("url5", {
-                                required: "Vui lòng chọn ảnh",
-                              })}
+                              {...register("url5")}
                               onChange={(e: any) => {
                                 setPreview5(
                                   URL.createObjectURL(e.target.files[0])
@@ -492,6 +573,8 @@ const AddSlider: NextPageWithLayout = (props: Props) => {
   );
 };
 
-AddSlider.getLayout = (page: ReactElement) => <AdminLayout>{page}</AdminLayout>;
+EditSlider.getLayout = (page: ReactElement) => (
+  <AdminLayout>{page}</AdminLayout>
+);
 
-export default AddSlider;
+export default EditSlider;
