@@ -1,8 +1,20 @@
-import React from 'react'
-import Image from 'next/image'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 type Props = {}
 
 const Contact = (props: Props) => {
+    const form = useRef();
+
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_7magxxi', 'template_qpun9jd',  'GB0nRglh2RmNxpQsu')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <div>
 
@@ -17,7 +29,7 @@ const Contact = (props: Props) => {
                     <div className="mt-[40px]">
                         <div className="flex">
                             <picture>
-                            <img src="./Image/Frame.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                                <img src="./Image/Frame.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
                             </picture>
                             <div>
                                 <h3 className="text-xl">Địa chỉ</h3>
@@ -26,7 +38,7 @@ const Contact = (props: Props) => {
                         </div>
                         <div className="flex py-[20px]">
                             <picture>
-                            <img src="./Image/Group.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                                <img src="./Image/Group.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
                             </picture>
                             <div>
                                 <h3 className="text-xl">Số điện thoại</h3>
@@ -35,16 +47,16 @@ const Contact = (props: Props) => {
                         </div>
                         <div className="flex">
                             <picture>
-                            <img src="./Image/Group (1).png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                                <img src="./Image/Group (1).png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
                             </picture>
                             <div>
                                 <h3 className="text-xl">Email</h3>
                                 <span className="text-[#6E6F7E]">example@gmail.com</span>
                             </div>
-                        </div>
+                        </div>.
                         <div className="flex py-[20px]">
                             <picture>
-                            <img src="./Image//Frame2.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
+                                <img src="./Image//Frame2.png" alt="" className="w-[30px] h-[30px] mr-[26px]" />
                             </picture>
                             <div>
                                 <h3 className="text-xl">Giờ mở cửa</h3>
@@ -55,18 +67,20 @@ const Contact = (props: Props) => {
                 </div>
                 <div className="box">
                     <h2 className="text-2xl">GÓP Ý VỚI CHÚNG TÔI</h2>
-                    <input type="text" placeholder="Tên của bạn"
-                        className="w-[590px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]" />
-                    <input type="text" placeholder="Email của bạn"
-                        className="w-[590px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]" />
-                    <textarea name="" id="" className="w-[590px] h-[120px] border border-[#A4A5AE] mt-[30px]">
-                    </textarea>
-                    <div>
-                        <button className="bg-black w-[590px] h-[60px] mt-[28px] ">
-                            <a href="" className="text-slate-50 ">Gửi</a>
-                        </button>
-                    </div>
-
+                    <form action="" onSubmit={sendEmail}>
+                        <input type="text" placeholder="Tên của bạn" name='from_name'
+                            className="w-[590px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]" />
+                        <input type="email" placeholder="Email của bạn" name='from_email'
+                            className="w-[590px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]" />
+                        <textarea name="message" id="" className="w-[590px] h-[120px] border border-[#A4A5AE] mt-[30px]">
+                        </textarea>
+                        <input type="submit" value="Send" className='bg-black w-[590px] h-[60px] mt-[28px] text-slate-50'/>
+                        {/* <div>
+                            <button className="bg-black w-[590px] h-[60px] mt-[28px] ">
+                                <a href="" className="text-slate-50 ">Gửi</a>
+                            </button>
+                        </div> */}
+                    </form>
                 </div>
             </div>
         </div>
