@@ -1,11 +1,12 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: "http://localhost:8000/api/",
+    // baseURL: "http://localhost:8000/api/",
+    baseURL: "https://duan01cuongnd.herokuapp.com/api",
     headers: {
         "Content-Type": "application/json",
     },
-});
+})
 
 
 
@@ -34,19 +35,4 @@ axiosClient.interceptors.response.use(
     },
 );
 
-export const axiosServer = axios.create({
-    baseURL: "http://localhost:8000/api",
-    headers: {
-        "Content-Type": "application/json",
-    },
-});
-
-axiosServer.interceptors.response.use(
-    function (response) {
-        return response.data;
-    },
-    function (error) {
-        return Promise.reject(error);
-    },
-);
 export default axiosClient;
