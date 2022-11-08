@@ -1,18 +1,14 @@
-import React, { ReactElement } from 'react'
-import Hero from '../../component/Hero'
-import { ClientLayout } from '../../layouts'
-import styles from './home.module.css'
+import React, { ReactElement } from "react";
+import Hero from "../../component/Hero";
+import { ClientLayout } from "../../layouts";
+import styles from "./home.module.css";
 
-type Props = {}
+type Props = {};
 
 const Home = (props: Props) => {
   return (
     <>
-      <div
-        id="carouselExampleCaptions"
-        className="carousel slide relative"
-        data-bs-ride="carousel"
-      >
+      <div id="carouselExampleCaptions" className="carousel slide relative" data-bs-ride="carousel">
         <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
           <button
             type="button"
@@ -22,23 +18,13 @@ const Home = (props: Props) => {
             aria-current="true"
             aria-label="Slide 1"
           />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={1}
-            aria-label="Slide 2"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={2}
-            aria-label="Slide 3"
-          />
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={1} aria-label="Slide 2" />
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={2} aria-label="Slide 3" />
         </div>
         <div className="carousel-inner relative w-full overflow-hidden">
           <div className="carousel-item active relative float-left w-full">
             <picture>
-            <img src="img/hero/hero-1.jpg" className="block w-full" alt="..." />
+              <img src="img/hero/hero-1.jpg" className="block w-full" alt="..." />
             </picture>
             <div className="carousel-caption hidden md:block absolute text-center">
               <h5 className="text-xl">First slide label</h5>
@@ -64,10 +50,7 @@ const Home = (props: Props) => {
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev"
           >
-            <span
-              className="carousel-control-prev-icon inline-block bg-no-repeat"
-              aria-hidden="true"
-            />
+            <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true" />
             <span className="visually-hidden">Previous</span>
           </button>
           <button
@@ -76,10 +59,7 @@ const Home = (props: Props) => {
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next"
           >
-            <span
-              className="carousel-control-next-icon inline-block bg-no-repeat"
-              aria-hidden="true"
-            />
+            <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true" />
             <span className="visually-hidden">Next</span>
           </button>
         </div>
@@ -117,13 +97,7 @@ const Home = (props: Props) => {
             mb-[15px]
             "
                 >
-                  <svg
-                    width={50}
-                    height={51}
-                    viewBox="0 0 50 51"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width={50} height={51} viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_58_110)">
                       <path
                         d="M40.7876 20.4842H22.1615C23.0228 19.4942 23.5462 18.2027 23.5462 16.7905C23.5462 13.6828 21.0179 11.1545 17.9102 11.1545C14.8025 11.1545 12.2742 13.6828 12.2742 16.7905C12.2742 18.2027 12.7976 19.4942 13.6588 20.4842H9.21254C6.52573 20.4842 4.33984 22.6701 4.33984 25.3569V31.1066C4.33984 31.6448 4.77614 32.0811 5.31438 32.0811C5.85262 32.0811 6.28892 31.6448 6.28892 31.1066V25.3569C6.28892 23.7448 7.60046 22.4333 9.21254 22.4333H36.4996C38.1117 22.4333 39.4232 23.7448 39.4232 25.3569V30.6194H29.288C26.6012 30.6194 24.4153 32.8053 24.4153 35.4921C24.4153 38.1789 26.6012 40.3648 29.288 40.3648H39.4232V45.6273C39.4232 47.2394 38.1117 48.5509 36.4996 48.5509H9.21254C7.60046 48.5509 6.28892 47.2394 6.28892 45.6273V39.8699C6.28892 39.3317 5.85262 38.8954 5.31438 38.8954C4.77614 38.8954 4.33984 39.3317 4.33984 39.8699V45.6273C4.33984 48.3141 6.52573 50.5 9.21254 50.5H40.7876C43.4744 50.5 45.6603 48.3141 45.6603 45.6273V25.3569C45.6603 22.6701 43.4744 20.4842 40.7876 20.4842ZM17.9102 13.1037C19.9432 13.1037 21.5971 14.7576 21.5971 16.7906C21.5971 18.8236 19.9432 20.4775 17.9102 20.4775C15.8773 20.4775 14.2233 18.8236 14.2233 16.7906C14.2233 14.7576 15.8772 13.1037 17.9102 13.1037ZM40.3952 22.4333H40.7876C42.3997 22.4333 43.7112 23.7448 43.7112 25.3569V30.6194H41.3723V25.3569C41.3723 24.2608 41.0083 23.2483 40.3952 22.4333ZM26.3644 35.4921C26.3644 33.88 27.676 32.5685 29.288 32.5685H43.7112V38.4157H29.288C27.676 38.4157 26.3644 37.1042 26.3644 35.4921ZM40.7876 48.5509H40.3952C41.0083 47.7359 41.3723 46.7235 41.3723 45.6273V40.3648H43.7112V45.6273C43.7112 47.2394 42.3997 48.5509 40.7876 48.5509Z"
@@ -152,19 +126,12 @@ const Home = (props: Props) => {
                     </g>
                     <defs>
                       <clipPath id="clip0_58_110">
-                        <rect
-                          width={50}
-                          height={50}
-                          fill="white"
-                          transform="translate(0 0.5)"
-                        />
+                        <rect width={50} height={50} fill="white" transform="translate(0 0.5)" />
                       </clipPath>
                     </defs>
                   </svg>
                 </div>
-                <h4 className="font-semibold text-xl text-dark mb-3">
-                  Thanh Toán Tiện Lợi
-                </h4>
+                <h4 className="font-semibold text-xl text-dark mb-3">Thanh Toán Tiện Lợi</h4>
                 <p className="text-body-color">We dejoy working with discerning</p>
               </div>
             </div>
@@ -197,13 +164,7 @@ const Home = (props: Props) => {
             mb-[15px]
             "
                 >
-                  <svg
-                    width={50}
-                    height={51}
-                    viewBox="0 0 50 51"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width={50} height={51} viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_58_146)">
                       <path
                         d="M45.1843 15.9863L45.1702 40.2496C45.169 42.5963 42.7682 44.1776 40.6069 43.2554C39.5309 42.7953 40.1808 41.2597 41.2642 41.7236C42.3212 42.1747 43.5028 41.4082 43.5034 40.2485L43.5175 15.9858C43.5175 8.3662 37.3181 2.16679 29.6979 2.16679H22.3345C14.7143 2.16679 8.51493 8.3662 8.51493 15.9863L8.51972 24.7723C8.51993 25.2325 8.14709 25.6059 7.68675 25.6061C7.22651 25.6063 6.85314 25.2336 6.85294 24.7731L6.84814 15.9868C6.84814 7.44718 13.7952 0.5 22.3345 0.5H29.6979C38.2371 0.5 45.1843 7.44718 45.1843 15.9863ZM40.6788 20.8096C40.6788 20.4371 40.4316 20.1098 40.0733 20.008C37.0836 19.1582 34.5573 16.9632 33.3562 13.9369C33.094 13.2758 32.1722 13.2265 31.8426 13.8592C30.5147 16.4077 28.4515 18.545 25.7821 19.9658C25.794 18.825 25.5136 17.6727 24.9267 16.6294C24.6337 16.1087 23.9062 16.0597 23.5429 16.5259C22.4307 17.9531 20.4766 19.889 17.4831 21.0067C17.0518 21.1678 16.8328 21.6478 16.9938 22.079C17.1549 22.5104 17.6351 22.729 18.066 22.5683C20.7211 21.577 22.6448 20.0153 23.9491 18.6157C24.1639 19.4283 24.1768 20.3005 23.9527 21.1578C23.7791 21.8228 24.4424 22.4015 25.0781 22.1385C28.1912 20.8486 30.7326 18.7327 32.5087 16.0167C33.9991 18.6507 36.3493 20.5065 39.0122 21.4214V32.2646C39.0122 37.3175 36.0465 41.9515 31.457 44.0704C31.0392 44.2634 30.8568 44.7585 31.0497 45.1764C31.2427 45.5941 31.7376 45.7767 32.1557 45.5837C37.2996 43.2089 40.6352 38.0337 40.6785 32.3766C40.6791 32.358 40.6788 20.8282 40.6788 20.8096ZM24.6023 41.1907C23.0881 39.6767 20.6377 39.6766 19.1234 41.1907C18.6345 41.68 17.8384 41.6798 17.3495 41.1907L14.1194 37.9608C13.6303 37.4717 13.6304 36.6757 14.1195 36.1867C14.5442 35.7619 14.8569 35.2598 15.0486 34.6943C15.1965 34.2583 14.963 33.7851 14.527 33.6373C14.0913 33.4894 13.6179 33.723 13.4701 34.1589C13.3612 34.4801 13.1831 34.7656 12.9407 35.008C11.8018 36.1471 11.8018 38.0002 12.9407 39.1393L16.1708 42.3693C17.3099 43.5084 19.1632 43.5082 20.302 42.3693C21.1645 41.5066 22.561 41.5066 23.4235 42.3693L24.9494 43.8951C25.8119 44.7576 25.8121 46.1539 24.9494 47.0165C22.5262 49.4399 18.5834 49.4397 16.1604 47.0165L8.29335 39.1495C5.87016 36.7264 5.87016 32.7836 8.29335 30.3605C9.15394 29.4997 10.5541 29.4997 11.4147 30.3603L11.5813 30.527C12.1236 31.0695 13.0159 30.647 13.014 29.9258L12.9944 22.6869C12.9932 22.2274 12.6203 21.8557 12.161 21.8557C11.7 21.8557 11.3264 22.23 11.3276 22.6913L11.343 28.3426C6.38155 26.2789 1.96935 35.1828 7.11473 40.3282L14.9818 48.1953C18.055 51.2683 23.0548 51.2683 26.1281 48.1953C27.6421 46.6811 27.6422 44.2306 26.128 42.7164L24.6023 41.1907ZM22.6826 29.3563V27.1686C22.6826 26.7084 22.3095 26.3352 21.8492 26.3352C21.389 26.3352 21.0158 26.7084 21.0158 27.1686V29.3563C21.0158 29.8165 21.389 30.1897 21.8492 30.1897C22.3095 30.1897 22.6826 29.8165 22.6826 29.3563ZM31.0166 27.1686C31.0166 26.7084 30.6434 26.3352 30.1832 26.3352C29.7229 26.3352 29.3498 26.7084 29.3498 27.1686V29.3563C29.3498 29.8165 29.7229 30.1897 30.1832 30.1897C30.6434 30.1897 31.0166 29.8165 31.0166 29.3563V27.1686ZM27.808 35.6692C26.6428 36.5433 25.0087 36.5702 23.8078 35.6693C23.4397 35.3931 22.9172 35.4677 22.6411 35.8359C22.3649 36.2042 22.4394 36.7265 22.8076 37.0027C24.6075 38.3531 27.0587 38.3149 28.8082 37.0028C29.1764 36.7266 29.251 36.2042 28.975 35.836C28.6984 35.4676 28.1758 35.3931 27.808 35.6692Z"
@@ -212,19 +173,12 @@ const Home = (props: Props) => {
                     </g>
                     <defs>
                       <clipPath id="clip0_58_146">
-                        <rect
-                          width={50}
-                          height={50}
-                          fill="white"
-                          transform="translate(0 0.5)"
-                        />
+                        <rect width={50} height={50} fill="white" transform="translate(0 0.5)" />
                       </clipPath>
                     </defs>
                   </svg>
                 </div>
-                <h4 className="font-semibold text-xl text-dark mb-3">
-                  Tư Vấn Nhiệt Tình
-                </h4>
+                <h4 className="font-semibold text-xl text-dark mb-3">Tư Vấn Nhiệt Tình</h4>
                 <p className="text-body-color">We dejoy working with discerning</p>
               </div>
             </div>
@@ -257,13 +211,7 @@ const Home = (props: Props) => {
             mb-[15px]
             "
                 >
-                  <svg
-                    width={50}
-                    height={51}
-                    viewBox="0 0 50 51"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width={50} height={51} viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M42.5124 30.1094C42.21 29.5822 41.7571 29.1572 41.2116 28.8891C40.7492 28.6548 40.2357 28.5393 39.7174 28.553C39.1992 28.5666 38.6924 28.709 38.2429 28.9672L30.4023 33.4899C30.2751 32.8175 29.9297 32.206 29.4195 31.75C28.842 31.2467 28.1019 30.9692 27.3359 30.9688H22.5226C22.4199 30.9689 22.3181 30.9487 22.2232 30.9094C22.1283 30.8701 22.0421 30.8125 21.9695 30.7399L21.7788 30.5492C21.4173 30.1858 20.9872 29.8977 20.5136 29.7015C20.04 29.5053 19.5321 29.405 19.0195 29.4063H13.0156C12.8976 29.4063 12.7812 29.4141 12.6249 29.4258C11.7276 29.515 10.8887 29.9119 10.2507 30.5492L8.20306 32.5985L7.47415 31.8696C7.32764 31.7231 7.12897 31.6408 6.92181 31.6408C6.71465 31.6408 6.51597 31.7231 6.36946 31.8696L1.94837 36.2813C1.87573 36.3538 1.81811 36.44 1.77879 36.5348C1.73947 36.6297 1.71924 36.7313 1.71924 36.834C1.71924 36.9367 1.73947 37.0383 1.77879 37.1332C1.81811 37.228 1.87573 37.3142 1.94837 37.3867L12.9945 48.4414C13.067 48.5141 13.1532 48.5717 13.248 48.611C13.3429 48.6503 13.4445 48.6706 13.5472 48.6706C13.6499 48.6706 13.7515 48.6503 13.8464 48.611C13.9412 48.5717 14.0274 48.5141 14.0999 48.4414L18.5218 44.0196C18.6683 43.8731 18.7505 43.6744 18.7505 43.4672C18.7505 43.2601 18.6683 43.0614 18.5218 42.9149L17.9023 42.2953L18.064 42.1336C18.2107 41.9877 18.4094 41.9059 18.6163 41.9063H27.2882C27.9745 41.9078 28.6488 41.726 29.2413 41.3797L41.3663 34.3797C41.8438 34.1078 42.2402 33.7136 42.5148 33.2377C42.7894 32.7618 42.9323 32.2213 42.9288 31.6719C42.9289 31.1236 42.7853 30.5849 42.5124 30.1094ZM13.5468 46.786L3.6054 36.8368L6.92103 33.5258L16.864 43.4688L13.5468 46.786ZM40.5859 33.0266L28.4546 40.0313C28.1009 40.2374 27.6984 40.3453 27.289 40.3438H18.6171C18.3091 40.3428 18.0039 40.403 17.7193 40.5209C17.4348 40.6388 17.1764 40.812 16.9593 41.0305L16.7976 41.1922L9.30774 33.7032L11.357 31.6539C11.7363 31.2744 12.2349 31.0371 12.7687 30.9821C12.8546 30.975 12.9351 30.9688 13.0156 30.9688H19.0195C19.3269 30.9681 19.6313 31.0282 19.9153 31.1458C20.1994 31.2634 20.4573 31.4361 20.6741 31.6539L20.8648 31.8446C21.0819 32.0631 21.3402 32.2363 21.6248 32.3542C21.9094 32.4721 22.2146 32.5323 22.5226 32.5313H27.3359C27.7215 32.5307 28.0944 32.6694 28.3859 32.9219C28.6795 33.1792 28.8639 33.5388 28.9015 33.9274C28.9269 34.1719 28.8912 34.4188 28.7976 34.6461C28.7259 34.8556 28.606 35.0454 28.4476 35.2C28.3029 35.3453 28.1309 35.4605 27.9414 35.5388C27.7519 35.6171 27.5487 35.6571 27.3437 35.6563H22.2031C21.9959 35.6563 21.7971 35.7386 21.6506 35.8851C21.5041 36.0316 21.4218 36.2303 21.4218 36.4375C21.4218 36.6447 21.5041 36.8434 21.6506 36.99C21.7971 37.1365 21.9959 37.2188 22.2031 37.2188H27.3437C27.7541 37.2196 28.1607 37.1391 28.5398 36.9818C28.9189 36.8245 29.263 36.5936 29.5523 36.3024C29.8059 36.0513 30.0125 35.7568 30.1624 35.4328L39.0202 30.3188C39.2473 30.1899 39.5029 30.1196 39.7639 30.1141C40.025 30.1087 40.2833 30.1683 40.5156 30.2875C40.785 30.4196 41.0089 30.629 41.1585 30.8891C41.2949 31.1269 41.3668 31.3962 41.3671 31.6703C41.369 31.9454 41.2977 32.216 41.1604 32.4544C41.0231 32.6927 40.8248 32.8902 40.5859 33.0266Z"
                       fill="black"
@@ -302,9 +250,7 @@ const Home = (props: Props) => {
                     />
                   </svg>
                 </div>
-                <h4 className="font-semibold text-xl text-dark mb-3">
-                  Giao Hàng Nhanh
-                </h4>
+                <h4 className="font-semibold text-xl text-dark mb-3">Giao Hàng Nhanh</h4>
                 <p className="text-body-color">We dejoy working with discerning</p>
               </div>
             </div>
@@ -337,13 +283,7 @@ const Home = (props: Props) => {
             mb-[15px]
             "
                 >
-                  <svg
-                    width={50}
-                    height={51}
-                    viewBox="0 0 50 51"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width={50} height={51} viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_58_138)">
                       <path
                         d="M37.5814 18.1464C37.5132 18.1464 3.52546 18.1464 3.52546 18.1464L10.6862 10.1203C11.1505 9.59984 11.105 8.8015 10.5845 8.33715C10.0642 7.87289 9.26568 7.9182 8.80133 8.43881L0.736693 17.4779C-0.245629 18.5792 -0.245532 20.2398 0.736791 21.3408L8.80142 30.38C9.05103 30.6598 9.39683 30.8022 9.7442 30.8022C10.0434 30.8022 10.3437 30.6964 10.5846 30.4816C11.1051 30.0173 11.1505 29.219 10.6863 28.6984L3.52556 20.6723C3.52556 20.6723 37.5132 20.6723 37.5815 20.6723C43.0363 20.6723 47.474 25.1102 47.474 30.5648C47.474 36.0195 43.0362 40.4574 37.5815 40.4574H31.5678C30.8702 40.4574 30.3048 41.0229 30.3048 41.7204C30.3048 42.4179 30.8702 42.9834 31.5678 42.9834H37.5815C44.4291 42.9834 50 37.4125 50 30.5648C49.9999 23.7173 44.429 18.1464 37.5814 18.1464Z"
@@ -352,19 +292,12 @@ const Home = (props: Props) => {
                     </g>
                     <defs>
                       <clipPath id="clip0_58_138">
-                        <rect
-                          width={50}
-                          height={50}
-                          fill="white"
-                          transform="translate(0 0.5)"
-                        />
+                        <rect width={50} height={50} fill="white" transform="translate(0 0.5)" />
                       </clipPath>
                     </defs>
                   </svg>
                 </div>
-                <h4 className="font-semibold text-xl text-dark mb-3">
-                  Đổi Trả Trong 14 Ngày
-                </h4>
+                <h4 className="font-semibold text-xl text-dark mb-3">Đổi Trả Trong 14 Ngày</h4>
                 <p className="text-body-color">We dejoy working with discerning</p>
               </div>
             </div>
@@ -373,71 +306,53 @@ const Home = (props: Props) => {
       </section>
 
       {/* service */}
-      <section
-        className="categories container-full py-5 bg-rose-50"
-        data-aos="zoom-in-up"
-      >
-        <div className="w-[1410px] mx-auto flex flex-wrap  flex justify-center">
-          <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+      <section className="categories container-full py-5 bg-rose-50" data-aos="zoom-in-up">
+        <div className="w-[1410px] mx-auto  flex-wrap  flex justify-center">
+          <div className="cate_item lg:w-1/5  md:w-2/5 pr-4 pl-4">
             <a href="#">
-             <picture>
-              <img
-                  src="img/category/cate1.jpg"
-                  className="rounded-full max-w-full h-auto border" alt=''
-                />
-             </picture>
+              <picture>
+                <img src="img/category/cate1.jpg" className="rounded-full max-w-full h-auto border" alt="" />
+              </picture>
             </a>
             <h5 className="text-center title mt-3 mb-3">
               <a href="#">Quần nam</a>
             </h5>
           </div>
-          <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+          <div className="cate_item lg:w-1/5  md:w-2/5 pr-4 pl-4">
             <a href="#">
               <picture>
-              <img
-                src="img/category/cate2.jpg"
-                className="rounded-full max-w-full h-auto border" alt=''
-              />
+                <img src="img/category/cate2.jpg" className="rounded-full max-w-full h-auto border" alt="" />
               </picture>
             </a>
             <h2 className="h5 text-center title mt-3 mb-3">
               <a href="#">Áo nam</a>
             </h2>
           </div>
-          <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+          <div className="cate_item lg:w-1/5 md:w-2/5 pr-4 pl-4">
             <a href="#">
-             <picture>
-             <img
-                src="img/category/cate3.jpg"
-                className="rounded-full max-w-full h-auto border" alt=''
-              />
-             </picture>
+              <picture>
+                <img src="img/category/cate3.jpg" className="rounded-full max-w-full h-auto border" alt="" />
+              </picture>
             </a>
             <h2 className="h5 text-center title mt-3 mb-3">
               <a href="#">Áo nữ</a>
             </h2>
           </div>
-          <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+          <div className="cate_item lg:w-1/5  md:w-2/5 pr-4 pl-4">
             <a href="#">
               <picture>
-              <img
-                src="img/category/cate4.jpg"
-                className="rounded-full max-w-full h-auto border" alt=''
-              />
+                <img src="img/category/cate4.jpg" className="rounded-full max-w-full h-auto border" alt="" />
               </picture>
             </a>
             <h2 className="h5 text-center title mt-3 mb-3">
               <a href="#">Quần nữ</a>
             </h2>
           </div>
-          <div className="cate_item lg:w-1/5 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
+          <div className="cate_item lg:w-1/5  md:w-1/2 pr-4 pl-4">
             <a href="#">
-             <picture>
-             <img
-                src="img/category/cate5.jpg"
-                className="rounded-full max-w-full h-auto border" alt=''
-              />
-             </picture>
+              <picture>
+                <img src="img/category/cate5.jpg" className="rounded-full max-w-full h-auto border" alt="" />
+              </picture>
             </a>
             <h2 className="h5 text-center title mt-3 mb-3">
               <a href="#">Phụ kiện</a>
@@ -453,68 +368,12 @@ const Home = (props: Props) => {
             <a className="block mb-2" href="#">
               <div className="relative overflow-hidden">
                 <div className="mb-5 overflow-hidden">
-                 <picture>
-                 <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
-                 </picture>
-                </div>
-                <div className="absolute flex flex-col top-4 right-4">
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-heart"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-cart2 "
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
-              <p className="text-lg font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
-                <span>$29.89</span>
-              </p>
-            </a>
-          </div>
-        </div>
-        <div className="w-full pb-8">
-          <div className="p-0 bg-light group text-center">
-            <a className="block mb-2" href="#">
-              <div className="relative overflow-hidden">
-                <div className="mb-5 overflow-hidden">
                   <picture>
-                  <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
                   </picture>
                 </div>
                 <div className="absolute flex flex-col top-4 right-4">
@@ -548,69 +407,9 @@ const Home = (props: Props) => {
                   </div>
                 </div>
               </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
               <p className="text-lg font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
-                <span>$29.89</span>
-              </p>
-            </a>
-          </div>
-        </div>
-        <div className="w-full pb-8">
-          <div className="p-0 bg-light group text-center">
-            <a className="block mb-2" href="#">
-              <div className="relative overflow-hidden">
-                <div className="mb-5 overflow-hidden">
-                 <picture>
-                 <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
-                 </picture>
-                </div>
-                <div className="absolute flex flex-col top-4 right-4">
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-heart"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-cart2 "
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
-              <p className="text-lg font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
                 <span>$29.89</span>
               </p>
             </a>
@@ -622,11 +421,11 @@ const Home = (props: Props) => {
               <div className="relative overflow-hidden">
                 <div className="mb-5 overflow-hidden">
                   <picture>
-                  <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
                   </picture>
                 </div>
                 <div className="absolute flex flex-col top-4 right-4">
@@ -660,125 +459,113 @@ const Home = (props: Props) => {
                   </div>
                 </div>
               </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
+              <p className="text-lg font-semibold text-[#A71010] ">
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
+                <span>$29.89</span>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div className="w-full pb-8">
+          <div className="p-0 bg-light group text-center">
+            <a className="block mb-2" href="#">
+              <div className="relative overflow-hidden">
+                <div className="mb-5 overflow-hidden">
+                  <picture>
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div className="absolute flex flex-col top-4 right-4">
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-heart"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-cart2 "
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
+              <p className="text-lg font-semibold text-[#A71010] ">
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
+                <span>$29.89</span>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div className="w-full pb-8">
+          <div className="p-0 bg-light group text-center">
+            <a className="block mb-2" href="#">
+              <div className="relative overflow-hidden">
+                <div className="mb-5 overflow-hidden">
+                  <picture>
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div className="absolute flex flex-col top-4 right-4">
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-heart"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-cart2 "
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
               <p className="text-lg mr-[8px] font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
-                <span>$29.89</span>
-              </p>
-            </a>
-          </div>
-        </div>
-        <div className="w-full pb-8">
-          <div className="p-0 bg-light group text-center">
-            <a className="block mb-2" href="#">
-              <div className="relative overflow-hidden">
-                <div className="mb-5 overflow-hidden">
-                 <picture>
-                 <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
-                 </picture>
-                </div>
-                <div className="absolute flex flex-col top-4 right-4">
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-heart"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-cart2 "
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
-              <p className="text-lg font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
-                <span>$29.89</span>
-              </p>
-            </a>
-          </div>
-        </div>
-        <div className="w-full pb-8">
-          <div className="p-0 bg-light group text-center">
-            <a className="block mb-2" href="#">
-              <div className="relative overflow-hidden">
-                <div className="mb-5 overflow-hidden">
-                 <picture>
-                 <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
-                 </picture>
-                </div>
-                <div className="absolute flex flex-col top-4 right-4">
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-heart"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={20}
-                        fill="currentColor"
-                        className="bi bi-cart2 "
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
-              <p className="text-lg font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
                 <span>$29.89</span>
               </p>
             </a>
@@ -790,11 +577,11 @@ const Home = (props: Props) => {
               <div className="relative overflow-hidden">
                 <div className="mb-5 overflow-hidden">
                   <picture>
-                  <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
                   </picture>
                 </div>
                 <div className="absolute flex flex-col top-4 right-4">
@@ -828,13 +615,9 @@ const Home = (props: Props) => {
                   </div>
                 </div>
               </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
               <p className="text-lg font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
                 <span>$29.89</span>
               </p>
             </a>
@@ -846,11 +629,11 @@ const Home = (props: Props) => {
               <div className="relative overflow-hidden">
                 <div className="mb-5 overflow-hidden">
                   <picture>
-                  <img
-                    className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                    alt=""
-                  />
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
                   </picture>
                 </div>
                 <div className="absolute flex flex-col top-4 right-4">
@@ -884,13 +667,113 @@ const Home = (props: Props) => {
                   </div>
                 </div>
               </div>
-              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">
-                Quality Headphones
-              </h3>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
               <p className="text-lg font-semibold text-[#A71010] ">
-                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">
-                  $33.69
-                </span>
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
+                <span>$29.89</span>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div className="w-full pb-8">
+          <div className="p-0 bg-light group text-center">
+            <a className="block mb-2" href="#">
+              <div className="relative overflow-hidden">
+                <div className="mb-5 overflow-hidden">
+                  <picture>
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div className="absolute flex flex-col top-4 right-4">
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-heart"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-cart2 "
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
+              <p className="text-lg font-semibold text-[#A71010] ">
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
+                <span>$29.89</span>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div className="w-full pb-8">
+          <div className="p-0 bg-light group text-center">
+            <a className="block mb-2" href="#">
+              <div className="relative overflow-hidden">
+                <div className="mb-5 overflow-hidden">
+                  <picture>
+                    <img
+                      className="object-cover w-full mx-auto transition-all h-[350px] group-hover:scale-110"
+                      src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div className="absolute flex flex-col top-4 right-4">
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 rounded group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-heart"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="relative flex items-center justify-center p-3 mb-3 text-white transition-all translate-x-20 bg-gray-700 group-hover:translate-x-0 wishlist hover:bg-blue-600 group">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={20}
+                        height={20}
+                        fill="currentColor"
+                        className="bi bi-cart2 "
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-normal text-[#999999] uppercase">Quality Headphones</h3>
+              <p className="text-lg font-semibold text-[#A71010] ">
+                <span className="text-lg mr-[8px] font-semibold text-gray-400 line-through ">$33.69</span>
                 <span>$29.89</span>
               </p>
             </a>
@@ -904,27 +787,21 @@ const Home = (props: Props) => {
           <div className="flex flex-wrap items-center">
             <div className="grow-0 shrink-0 basis-auto hidden lg:flex lg:w-6/12 xl:w-1/2">
               <picture>
-              <img
-                src="img/about/testimonial-pic.jpg"
-                alt="Trendy Pants and Shoes"
-                className="w-full "
-              />
+                <img src="img/about/testimonial-pic.jpg" alt="Trendy Pants and Shoes" className="w-full " />
               </picture>
             </div>
             <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-1/2">
               <div className="px-6 py-12  mx-auto ml-[64px]">
-                <h2 className="text-3xl font-normal mb-6">
-                  Đăng ký để nhận 30% ưu đãi
-                </h2>
+                <h2 className="text-3xl font-normal mb-6">Đăng ký để nhận 30% ưu đãi</h2>
                 <div className="md:flex flex-row">
                   <input
                     type="text"
-                    className="w-[440px] form-control block w-full px-4 py-2 mb-2 md:mb-0 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className=" form-control block w-full px-4 py-2 mb-2 md:mb-0 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     placeholder="Email của bạn"
                   />
                   <button
                     type="submit"
-                    className="inline-block px-7 py-3 bg-black text-white font-normal text-sm leading-snug uppercase hover:bg-blue-700 hover:bg-white hover:text-black "
+                    className="inline-block px-7 py-3 bg-black text-white font-normal text-sm leading-snug uppercase  hover:bg-white hover:text-black "
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                   >
@@ -938,9 +815,7 @@ const Home = (props: Props) => {
       </section>
       <section className="w-[1410px] mx-auto">
         <div className="container px-6 text-gray-600 md:px-12 xl:px-6">
-          <h2 className="mb-12 text-center text-2xl text-gray-900 font-light md:text-4xl">
-            Đánh Giá Từ Khách Hàng
-          </h2>
+          <h2 className="mb-12 text-center text-2xl text-gray-900 font-light md:text-4xl">Đánh Giá Từ Khách Hàng</h2>
           <div className="grid gap-[63px] lg:grid-cols-2">
             <div className="p-6 border border-gray-100 bg-light sm:flex flex-col sm:space-x-8 sm:p-8 ">
               <div className="flex items-center justify-center mb-[15px]">
@@ -998,22 +873,21 @@ const Home = (props: Props) => {
               <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-center">
                 <p className="text-gray-600">
                   {" "}
-                  <span className="font-serif">&quot;</span> Mình là người khá kỹ tính
-                  trong việc mua hàng, mà shop này lại làm mình vui vẻ khi mua hàng
-                  thì là một thành công lớn của shop này rồi đấy{" "}
+                  <span className="font-serif">&quot;</span> Mình là người khá kỹ tính trong việc mua hàng, mà shop này
+                  lại làm mình vui vẻ khi mua hàng thì là một thành công lớn của shop này rồi đấy{" "}
                   <span className="font-serif">&ldquo;</span>
                 </p>
                 <div className="pb-[34px] text-center">
-                 <picture>
-                 <img
-                    className="w-20 h-20 mx-auto rounded-full mb-[20px]"
-                    src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp"
-                    alt="user avatar"
-                    height={220}
-                    width={220}
-                    loading="lazy"
-                  />
-                 </picture>
+                  <picture>
+                    <img
+                      className="w-20 h-20 mx-auto rounded-full mb-[20px]"
+                      src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp"
+                      alt="user avatar"
+                      height={220}
+                      width={220}
+                      loading="lazy"
+                    />
+                  </picture>
                   <h6 className="text-lg font-semibold leading-none">Đỗ Văn A</h6>
                 </div>
               </div>
@@ -1074,21 +948,20 @@ const Home = (props: Props) => {
               <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-center">
                 <p className="text-gray-600">
                   {" "}
-                  <span className="font-serif">&quot;</span> Không phải tự dưng mà tôi khen
-                  shop này đâu nhé. Đồ gì đâu mà vừa chất lượng lại vừa có giá vô cùng
-                  rẻ nữa chứ. <span className="font-serif">&ldquo;</span>
+                  <span className="font-serif">&quot;</span> Không phải tự dưng mà tôi khen shop này đâu nhé. Đồ gì đâu
+                  mà vừa chất lượng lại vừa có giá vô cùng rẻ nữa chứ. <span className="font-serif">&ldquo;</span>
                 </p>
                 <div className="pb-[34px] text-center">
-                 <picture>
-                 <img
-                    className="w-20 h-20 mx-auto rounded-full mb-[20px]"
-                    src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp"
-                    alt="user avatar"
-                    height={220}
-                    width={220}
-                    loading="lazy"
-                  />
-                 </picture>
+                  <picture>
+                    <img
+                      className="w-20 h-20 mx-auto rounded-full mb-[20px]"
+                      src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp"
+                      alt="user avatar"
+                      height={220}
+                      width={220}
+                      loading="lazy"
+                    />
+                  </picture>
                   <h6 className="text-lg font-semibold leading-none">Nguyễn Văn A</h6>
                 </div>
               </div>
@@ -1108,11 +981,7 @@ const Home = (props: Props) => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
             <div>
               <picture>
-              <img
-                className="object-cover object-center w-full h-64 lg:h-80"
-                src="img/blog/blog-3.jpg"
-                alt=""
-              />
+                <img className="object-cover object-center w-full h-64 lg:h-80" src="img/blog/blog-3.jpg" alt="" />
               </picture>
               <div className="mt-8 text-center">
                 <span className="text-xs uppercase tracking-widest">Thời Trang</span>
@@ -1127,13 +996,9 @@ const Home = (props: Props) => {
               </div>
             </div>
             <div>
-             <picture>
-             <img
-                className="object-cover object-center w-full h-64  lg:h-80"
-                src="img/blog/blog-2.jpg"
-                alt=""
-              />
-             </picture>
+              <picture>
+                <img className="object-cover object-center w-full h-64  lg:h-80" src="img/blog/blog-2.jpg" alt="" />
+              </picture>
               <div className="mt-8 text-center">
                 <span className="text-xs uppercase tracking-widest">Thời Trang</span>
                 <h1 className="mt-4 text-2xl font-normal text-gray-800 capitalize dark:text-white">
@@ -1147,18 +1012,12 @@ const Home = (props: Props) => {
               </div>
             </div>
             <div>
-             <picture>
-             <img
-                className="object-cover object-center w-full h-64 lg:h-80"
-                src="img/blog/blog-1.jpg"
-                alt=""
-              />
-             </picture>
+              <picture>
+                <img className="object-cover object-center w-full h-64 lg:h-80" src="img/blog/blog-1.jpg" alt="" />
+              </picture>
               <div className="mt-8 text-center">
                 <span className="text-xs uppercase tracking-widest">Thời Trang</span>
-                <h1 className="mt-4 text-2xl font-normal text-gray-800 capitalize dark:text-white">
-                  Cách Phối Đồ Đẹp
-                </h1>
+                <h1 className="mt-4 text-2xl font-normal text-gray-800 capitalize dark:text-white">Cách Phối Đồ Đẹp</h1>
                 <div className="text-center mt-4">
                   <a href="#" className="inline-block text-black underline ">
                     Đọc Tiếp
@@ -1169,11 +1028,8 @@ const Home = (props: Props) => {
           </div>
         </div>
       </section>
-
-
     </>
-
-  )
-}
-Home.getLayout = (page: ReactElement) => <ClientLayout>{page}</ClientLayout>
-export default Home
+  );
+};
+Home.getLayout = (page: ReactElement) => <ClientLayout>{page}</ClientLayout>;
+export default Home;
