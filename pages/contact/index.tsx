@@ -4,11 +4,10 @@ type Props = {}
 
 const Contact = (props: Props) => {
     const form = useRef();
-
     const sendEmail = (e: any) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_7magxxi', 'template_qpun9jd',  'GB0nRglh2RmNxpQsu')
+        emailjs.sendForm('service_7magxxi', 'template_qpun9jd', form.current, 'GB0nRglh2RmNxpQsu')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -67,7 +66,7 @@ const Contact = (props: Props) => {
                 </div>
                 <div className="box">
                     <h2 className="text-2xl">GÓP Ý VỚI CHÚNG TÔI</h2>
-                    <form action="" onSubmit={sendEmail}>
+                    <form action="" ref={form} onSubmit={sendEmail}>
                         <input type="text" placeholder="Tên của bạn" name='from_name'
                             className="w-[590px] h-[60px] border border-[#A4A5AE] pl-[24px] mt-[30px]" />
                         <input type="email" placeholder="Email của bạn" name='from_email'
