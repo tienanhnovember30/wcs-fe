@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    // baseURL: "http://localhost:8000/api/",
+
     baseURL: "https://duan01cuongnd.herokuapp.com/api/",
     headers: {
         "Content-Type": "application/json",
@@ -10,7 +10,7 @@ const axiosClient = axios.create({
 
 export const axiosServer = axios.create({
     baseURL: "https://duan01cuongnd.herokuapp.com/api/",
-    // baseURL: "http://localhost:8000/api/",
+
     headers: {
         "Content-Type": "application/json",
     },
